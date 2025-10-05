@@ -167,7 +167,7 @@ The compiled jar will be in `target/HeadHunter-1.0.jar`
 
 ## 📝 License
 
-This plugin was created by **wilcodwg**.
+This plugin was created by **Dutchwilco**.
 
 ## 🐛 Support
 
