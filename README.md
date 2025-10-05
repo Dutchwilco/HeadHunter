@@ -175,7 +175,7 @@ For bugs, issues, or feature requests, please contact the plugin author.
 
 ## 🔄 Version History
 
-### v1.0
+### v1.0.0
 - Initial release
 - Tier-based mob progression system
 - Gold nugget redemption
