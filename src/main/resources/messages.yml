@@ -1,0 +1,174 @@
+# ====================================
+#          HeadHunter Messages
+# ====================================
+
+messages:
+  prefix: "&6[HeadHunter]&r "
+  reload: "&aPlugin reloaded successfully!"
+  no-permission: "&cYou don't have permission to do that!"
+  player-only: "&cThis command can only be used by players!"
+  unknown-command: "&cUnknown command! Use /hh help for help."
+  
+  # Nugget Messages
+  nugget-received: "&e&l⛏ SPAWNER KILL! &7You received a &6{mob} Nugget&7!"
+  nugget-redeemed: "&a&lREDEEMED! &r&7({amount}x)"
+  nugget-xp-gained: "&e+{xp} XP &7| &e+{coins} Coins"
+  nugget-level-up: "&6{mob} &7is now level &f{level}&7!"
+  
+  # Tier Messages
+  tier-locked: "&cYou haven't unlocked this mob tier yet!"
+  
+  # Coin Messages (kept for compatibility)
+  coin-redeemed: "&a&l✓ &7Redeemed &6{amount}&7! Your balance: &6{balance}"
+  coin-no-economy: "&c&l✗ &7Economy system not available!"
+  
+  # GUI Messages (legacy)
+  gui-title: "&6&lHeadHunter Stats"
+  gui-max-level: "&a&lMAX"
+  gui-max-level-reached: "&a&lMAXIMUM LEVEL REACHED!"
+
+# ====================================
+#          GUI Configuration
+# ====================================
+
+gui:
+  # Rarity Selection GUI (Main Menu)
+  rarity-selection:
+    title: "&6&lSelect Mob Rarity"
+    rows: 3
+    items:
+      common:
+        slot: 11
+        material: PAPER
+        name: "&f&lCOMMON MOBS"
+        lore:
+          unlocked:
+            - "&7Click to view &f{count} mobs"
+            - ""
+            - "&a✔ Unlocked"
+          locked:
+            - "&7Reach level &e{required}&7 to unlock"
+            - ""
+            - "&c✖ Locked &7({current}/{required})"
+      uncommon:
+        slot: 13
+        material: LIME_DYE
+        name: "&a&lUNCOMMON MOBS"
+        lore:
+          unlocked:
+            - "&7Click to view &a{count} mobs"
+            - ""
+            - "&a✔ Unlocked"
+          locked:
+            - "&7Reach level &e{required}&7 to unlock"
+            - ""
+            - "&c✖ Locked &7({current}/{required})"
+      rare:
+        slot: 15
+        material: LAPIS_LAZULI
+        name: "&9&lRARE MOBS"
+        lore:
+          unlocked:
+            - "&7Click to view &9{count} mobs"
+            - ""
+            - "&a✔ Unlocked"
+          locked:
+            - "&7Reach level &e{required}&7 to unlock"
+            - ""
+            - "&c✖ Locked &7({current}/{required})"
+      legendary:
+        slot: 20
+        material: GOLD_INGOT
+        name: "&6&lLEGENDARY MOBS"
+        lore:
+          unlocked:
+            - "&7Click to view &6{count} mobs"
+            - ""
+            - "&a✔ Unlocked"
+          locked:
+            - "&7Reach level &e{required}&7 to unlock"
+            - ""
+            - "&c✖ Locked &7({current}/{required})"
+  
+  # Mob List GUI (Shows mobs for a specific tier)
+  mob-list:
+    title: "&6&l{tier} Mobs"
+    rows: 6
+    max-level-label: "&a&lMAX"
+    max-level-reached: "&a&lMAXIMUM LEVEL REACHED!"
+    
+    mob-item:
+      name: "&6&l{mob}"
+      lore:
+        default:
+          - ""
+          - "&e⚔ Level: &f{level}"
+          - "&e✦ XP: &f{current} &7/ &f{required}"
+          - ""
+          - "{progressbar}"
+          - ""
+          - "&7Tier: {tiercolor}{tier}"
+          - "&7Base Coins: &e{coins}"
+        max:
+          - ""
+          - "&e⚔ Level: &f{level} {maxlabel}"
+          - "{maxreached}"
+          - ""
+          - "&7Tier: {tiercolor}{tier}"
+          - "&7Base Coins: &e{coins}"
+    
+    back-button:
+      slot: 49
+      material: ARROW
+      name: "&c&lBack"
+      lore:
+        - "&7Click to go back"
+
+# Title Messages
+titles:
+  level-up:
+    title: "&6&lLevel Up!"
+    subtitle: "&e{mob} &7level &f{level}"
+    fade-in: 10
+    stay: 70
+    fade-out: 20
+
+# Action Bar Messages
+actionbar:
+  xp-gained: "&e{mob} &7XP: &f{xp}&7/&f{required}"
+
+# Item Lore
+lore:
+  # Nugget Lore
+  nugget:
+    - "&7Right-click to redeem!"
+    - ""
+    - "&e⚔ XP: &f{xp}"
+    - "&e💰 Coins: &f{coins}"
+  
+  # GUI Mob Head Lore
+  gui-mob:
+    - ""
+    - "&e⚔ Level: &f{level}"
+    - "&e✦ XP: &f{current} &7/ &f{required}"
+    - ""
+    - "{progressbar}"
+    - ""
+    - "&7Tier: {tiercolor}{tier}"
+    - "&7Base Coins: &e{coins}"
+  
+  gui-mob-max:
+    - ""
+    - "&e⚔ Level: &f{level} {maxlabel}"
+    - "{maxreached}"
+    - ""
+    - "&7Tier: {tiercolor}{tier}"
+    - "&7Base Coins: &e{coins}"
+
+# Progress Bar Settings
+progressbar:
+  character: "▌"
+  completed-color: "&a"
+  remaining-color: "&8"
+  length: 20
+  format: "&7[{bar}&7] &f{percentage}%"

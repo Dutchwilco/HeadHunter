@@ -1,0 +1,84 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                    HeadHunter                        | #
+# |              Configuration Settings                  | #
+# +------------------------------------------------------+ #
+############################################################
+
+# ========================================
+#           GENERAL SETTINGS
+# ========================================
+
+# Only count kills from mob spawners (true = only spawner mobs count, false = all mobs count)
+spawner-only-mode: true
+
+# Prevent players from trading/dropping mob nuggets and coins
+prevent-item-trade: true
+
+# ========================================
+#          PROGRESSION SETTINGS
+# ========================================
+
+# Show action bar when gaining XP from kills
+show-actionbar-on-kill: true
+
+# Display title screen when player levels up a mob
+show-title-on-levelup: true
+
+# Play sound effect when leveling up
+play-sound-on-levelup: true
+levelup-sound: ENTITY_PLAYER_LEVELUP
+
+# Sound when redeeming nuggets
+play-sound-on-redeem: true
+redeem-sound: ENTITY_EXPERIENCE_ORB_PICKUP
+
+# ========================================
+#           REWARD SETTINGS
+# ========================================
+
+# Base coin multiplier (applied to all mob coin rewards)
+base-coin-multiplier: 1.0
+
+# Coin multiplier increase per mob level (e.g., 0.1 = +10% per level)
+coin-multiplier-per-level: 0.1
+
+# Enable Vault integration for economy rewards
+vault-economy-enabled: false
+
+# ========================================
+#          NUGGET SETTINGS
+# ========================================
+
+# Material for mob nuggets (dropped by spawner mobs)
+nugget-material: GOLD_NUGGET
+
+# Enable glow effect on nuggets
+nugget-glow: true
+
+# ========================================
+#            GUI SETTINGS
+# ========================================
+
+# GUI size (must be multiple of 9, max 54)
+gui-size: 54
+
+# Fill empty slots with glass panes
+gui-fill-empty-slots: true
+gui-filler-material: BLACK_STAINED_GLASS_PANE
+
+# ========================================
+#          DATABASE SETTINGS
+# ========================================
+
+# Storage type: YAML or MYSQL (YAML is default)
+storage-type: YAML
+
+# MySQL settings (only used if storage-type is MYSQL)
+mysql:
+  host: localhost
+  port: 3306
+  database: headhunter
+  username: root
+  password: password
+  use-ssl: false

@@ -1,0 +1,157 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                    HeadHunter                        | #
+# |              Mob Configuration                       | #
+# +------------------------------------------------------+ #
+############################################################
+
+# ========================================
+#        TIER UNLOCK REQUIREMENTS
+# ========================================
+# Minimum level required in ALL mobs of the previous tier to unlock next tier
+# Example: To unlock UNCOMMON tier, player needs ALL COMMON mobs at level 5+
+
+tier-unlock-requirements:
+  COMMON: 0        # Always unlocked from start
+  UNCOMMON: 5      # Need all COMMON mobs at level 5+
+  RARE: 10         # Need all UNCOMMON mobs at level 10+
+  LEGENDARY: 15    # Need all RARE mobs at level 15+
+
+# ========================================
+#          MOB CONFIGURATIONS
+# ========================================
+# Configure each mob's tier, rewards, and progression
+#
+# Format:
+#   mob_name:                    # Use Minecraft entity type (lowercase with underscores)
+#     tier: TIER_NAME            # COMMON, UNCOMMON, RARE, or LEGENDARY
+#     base-coins: 10.0           # Base coin reward per kill (affected by multipliers)
+#     xp-requirements: [...]     # XP needed for each level (array of 10 values for levels 1-10)
+#     head-texture: "..."        # (Optional) Custom head texture hash or base64 string
+#
+# Head Textures:
+#   - Use texture hash from minecraft-heads.com or mineskin.org
+#   - Or use full base64 texture string
+#   - If omitted, uses default mob head
+#
+
+mobs:
+  # ========================================
+  #            COMMON TIER
+  # ========================================
+  # Basic passive mobs - always unlocked
+  # Low rewards, easy progression
+  
+  cow:
+    tier: COMMON
+    base-coins: 10.0
+    xp-requirements: [10, 25, 50, 100, 200, 350, 500, 700, 1000, 1500]
+  
+  pig:
+    tier: COMMON
+    base-coins: 10.0
+    xp-requirements: [10, 25, 50, 100, 200, 350, 500, 700, 1000, 1500]
+  
+  chicken:
+    tier: COMMON
+    base-coins: 8.0
+    xp-requirements: [10, 25, 50, 100, 200, 350, 500, 700, 1000, 1500]
+  
+  sheep:
+    tier: COMMON
+    base-coins: 12.0
+    xp-requirements: [10, 25, 50, 100, 200, 350, 500, 700, 1000, 1500]
+    head-texture: "42885ec6e1b58798158e03cc02d8983cc4a1536394f4e4c4c82a06910d64ad2b"
+
+  rabbit:
+    tier: COMMON
+    base-coins: 8.0
+    xp-requirements: [10, 25, 50, 100, 200, 350, 500, 700, 1000, 1500]
+
+  # ========================================
+  #           UNCOMMON TIER
+  # ========================================
+  # Basic hostile mobs
+  # Moderate rewards, requires level 5 in all COMMON mobs
+  
+  zombie:
+    tier: UNCOMMON
+    base-coins: 20.0
+    xp-requirements: [15, 40, 80, 150, 300, 500, 750, 1100, 1600, 2300]
+  
+  skeleton:
+    tier: UNCOMMON
+    base-coins: 22.0
+    xp-requirements: [15, 40, 80, 150, 300, 500, 750, 1100, 1600, 2300]
+  
+  creeper:
+    tier: UNCOMMON
+    base-coins: 25.0
+    xp-requirements: [15, 40, 80, 150, 300, 500, 750, 1100, 1600, 2300]
+  
+  spider:
+    tier: UNCOMMON
+    base-coins: 18.0
+    xp-requirements: [15, 40, 80, 150, 300, 500, 750, 1100, 1600, 2300]
+
+  cave_spider:
+    tier: UNCOMMON
+    base-coins: 23.0
+    xp-requirements: [15, 40, 80, 150, 300, 500, 750, 1100, 1600, 2300]
+
+  # ========================================
+  #             RARE TIER
+  # ========================================
+  # Advanced hostile mobs
+  # High rewards, requires level 10 in all UNCOMMON mobs
+  
+  blaze:
+    tier: RARE
+    base-coins: 40.0
+    xp-requirements: [25, 60, 120, 250, 450, 750, 1200, 1800, 2600, 3700]
+  
+  enderman:
+    tier: RARE
+    base-coins: 45.0
+    xp-requirements: [25, 60, 120, 250, 450, 750, 1200, 1800, 2600, 3700]
+  
+  witch:
+    tier: RARE
+    base-coins: 50.0
+    xp-requirements: [25, 60, 120, 250, 450, 750, 1200, 1800, 2600, 3700]
+  
+  piglin:
+    tier: RARE
+    base-coins: 38.0
+    xp-requirements: [25, 60, 120, 250, 450, 750, 1200, 1800, 2600, 3700]
+
+  hoglin:
+    tier: RARE
+    base-coins: 42.0
+    xp-requirements: [25, 60, 120, 250, 450, 750, 1200, 1800, 2600, 3700]
+
+  # ========================================
+  #          LEGENDARY TIER
+  # ========================================
+  # Elite/boss mobs
+  # Maximum rewards, requires level 15 in all RARE mobs
+  
+  wither_skeleton:
+    tier: LEGENDARY
+    base-coins: 100.0
+    xp-requirements: [50, 120, 250, 500, 900, 1500, 2400, 3600, 5200, 7500]
+  
+  piglin_brute:
+    tier: LEGENDARY
+    base-coins: 90.0
+    xp-requirements: [50, 120, 250, 500, 900, 1500, 2400, 3600, 5200, 7500]
+  
+  guardian:
+    tier: LEGENDARY
+    base-coins: 85.0
+    xp-requirements: [50, 120, 250, 500, 900, 1500, 2400, 3600, 5200, 7500]
+
+  elder_guardian:
+    tier: LEGENDARY
+    base-coins: 120.0
+    xp-requirements: [50, 120, 250, 500, 900, 1500, 2400, 3600, 5200, 7500]

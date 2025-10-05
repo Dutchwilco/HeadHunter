@@ -1,0 +1,24 @@
+name: HeadHunter
+version: ${project.version}
+main: nl.dutchcoding.headhunter.HeadHunter
+api-version: '1.21'
+author: Dutchwilco
+website: dutchcoding.nl
+softdepend: [Vault, PlaceholderAPI]
+
+commands:
+  headhunter:
+    description: Main HeadHunter command
+    usage: /<command> [stats|help|reload]
+    aliases: [hh]
+
+permissions:
+  headhunter.use:
+    description: Allows using the HeadHunter system
+    default: true
+  headhunter.admin:
+    description: Allows using admin commands
+    default: op
+  headhunter.reload:
+    description: Allows reloading the plugin
+    default: op
